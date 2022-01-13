@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:blog_app_task/ui/login/login_screen.dart';
-import 'package:blog_app_task/utils/app_colors.dart';
+import 'package:blog_app_task/utils/remote_config/app_colors.dart';
 import 'package:blog_app_task/utils/remote_config/app_constants.dart';
 import 'package:flutter/material.dart';
 
