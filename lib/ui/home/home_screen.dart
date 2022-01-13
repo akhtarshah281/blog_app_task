@@ -1,9 +1,10 @@
+import 'package:blog_app_task/utils/app_constants.dart';
 import 'package:blog_app_task/utils/const.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
 
-  static const String routeName = homeRoute;
+  static const String routeName = AppConstants.homeRoute;
 
   @override
   _HomeScreenState createState() => _HomeScreenState();

@@ -1,4 +1,4 @@
-import 'package:blog_app_task/data/app_database.dart';
+import 'package:blog_app_task/data/local_db/app_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 

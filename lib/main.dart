@@ -1,5 +1,5 @@
 import 'package:blog_app_task/base/base_repo.dart';
-import 'package:blog_app_task/data/app_database.dart';
+import 'package:blog_app_task/data/local_db/app_database.dart';
 import 'package:blog_app_task/data/repositories/add_post/add_post_repo.dart';
 import 'package:blog_app_task/data/repositories/add_post/add_post_repo_imp.dart';
 import 'package:blog_app_task/data/repositories/forgot/forgot_repo.dart';
