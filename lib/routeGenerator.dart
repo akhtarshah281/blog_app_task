@@ -23,7 +23,6 @@ Route<MaterialPageRoute> RouteGenerator(RouteSettings settings) {
                 create: (context) => SplashVM(),
                 child: SplashScreen(),
               ));
-
     case LoginScreen.routeName:
       return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider(

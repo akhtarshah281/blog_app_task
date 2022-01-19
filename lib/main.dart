@@ -12,14 +12,20 @@ import 'package:blog_app_task/data/repositories/register/register_repo_imp.dart'
 import 'package:blog_app_task/data/repositories/update_post/update_repo.dart';
 import 'package:blog_app_task/data/repositories/update_post/update_repo_imp.dart';
 import 'package:blog_app_task/routeGenerator.dart';
+import 'package:blog_app_task/ui/register/register_screen.dart';
 import 'package:blog_app_task/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:firebase_core/firebase_core.dart';
 
+import 'data/api_client.dart';
 import 'data/repositories/home/home_repo.dart';
 
 main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   GetIt.I.registerSingletonAsync(() => BaseRepo.initDB());
+  GetIt.I.registerSingleton<ApiClient>(ApiClient());
   GetIt.I.registerSingletonWithDependencies<AddPostRepo>(() => AddPostRepoImp(),
       dependsOn: [AppDatabase]);
   GetIt.I.registerSingletonWithDependencies<HomeRepo>(() => HomeRepoImp(),
@@ -33,6 +39,8 @@ main() async {
       dependsOn: [AppDatabase]);
   GetIt.I.registerSingletonWithDependencies<ForgotRepo>(() => ForgotRepoImp(),
       dependsOn: [AppDatabase]);
+  await GetIt.I.allReady();
+  await Firebase.initializeApp();
   runApp(MaterialApp(
       onGenerateRoute: RouteGenerator, initialRoute: SplashScreen.routeName));
 }

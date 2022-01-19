@@ -7,7 +7,13 @@ class AppConstants {
   static const String forgotRoute = 'forgot';
   static const String updateProfileRoute = 'updateProfile';
 
-  // static const String BASE_URL_KEY = 'base_url';
+
+  static const String loginTitle = 'Login';
+  static const String emailLabel = 'Email';
+  static const String passwordLabel = 'Password';
+
+
+// static const String BASE_URL_KEY = 'base_url';
   // static const String BEARER_TOKEN = 'bearer_token';
   // static const String DEV = 'DEV';
   // static const String PROD = 'PROD';

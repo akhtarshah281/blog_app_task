@@ -1,4 +1,4 @@
-import 'package:blog_app_task/utils/remote_config/app_constants.dart';
+import 'package:blog_app_task/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

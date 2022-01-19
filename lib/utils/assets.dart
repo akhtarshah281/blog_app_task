@@ -20,4 +20,5 @@ class Assets {
   static const String logout = baseImagePath + 'logout_image.png';
   static const String cameraRect = baseImagePath + 'camera_rect.png';
   static const String watchBg = baseImagePath + 'watch_bg.png';
+  static const String loginLogo = baseImagePath + 'login.png';
 }
