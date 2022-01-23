@@ -48,7 +48,7 @@ Route<MaterialPageRoute> RouteGenerator(RouteSettings settings) {
     case HomeScreen.routeName:
       return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider(
-                create: (context) => HomeVM(),
+                create: (context) => HomeVM(context),
                 child: HomeScreen(),
               ));
     case AddPostScreen.routeName:

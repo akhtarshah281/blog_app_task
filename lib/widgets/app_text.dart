@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class PrimaryText extends StatelessWidget {
   final String text;
   final double? fontSize;
-  final Color color;
+  final Color? color;
   final FontWeight fontWeight;
   final TextOverflow? textOverflow;
   final TextAlign textAlign;
@@ -17,7 +17,7 @@ class PrimaryText extends StatelessWidget {
     this.softWrap,
     this.textOverflow,
     this.maxLines,
-    this.color = AppColors.WHITE,
+    this.color,
     this.fontWeight = FontWeight.normal,
     this.textAlign = TextAlign.start,
   });

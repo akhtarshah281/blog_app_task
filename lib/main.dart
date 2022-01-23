@@ -12,9 +12,13 @@ import 'package:blog_app_task/data/repositories/register/register_repo_imp.dart'
 import 'package:blog_app_task/data/repositories/update_post/update_repo.dart';
 import 'package:blog_app_task/data/repositories/update_post/update_repo_imp.dart';
 import 'package:blog_app_task/routeGenerator.dart';
+import 'package:blog_app_task/ui/add_post/add_post_screen.dart';
+import 'package:blog_app_task/ui/home/home_screen.dart';
+import 'package:blog_app_task/ui/login/login_screen.dart';
 import 'package:blog_app_task/ui/register/register_screen.dart';
 import 'package:blog_app_task/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -41,6 +45,12 @@ main() async {
       dependsOn: [AppDatabase]);
   await GetIt.I.allReady();
   await Firebase.initializeApp();
+
   runApp(MaterialApp(
-      onGenerateRoute: RouteGenerator, initialRoute: SplashScreen.routeName));
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        ),
+      ),
+      onGenerateRoute: RouteGenerator, initialRoute:LoginScreen.routeName));
 }

@@ -28,26 +28,50 @@ class RegisterVM extends BaseVm {
     String getEmail = emailController.text.trim();
     String getPassword = passwordController.text.trim();
 
-    if(getFirstName== null){
+    if (getFirstName.isEmpty) {
       Message.error('first name is empty');
-    }else if(getLastName== null){
+    } else if (getLastName.isEmpty) {
       Message.error('last name is empty');
-    }else if(getEmail== null){
+    } else if (getEmail.isEmpty) {
       Message.error('email is empty');
-    }else if(getPassword== null){
+    } else if (getPassword.isEmpty) {
       Message.error('password can not be empty');
-    }else{
-      await registerWithEmailPassword(context: context, email: getEmail, password: getPassword);
+    } else {
+      await registerWithEmailPassword(
+          context: context, email: getEmail, password: getPassword);
       Message.success('Registered Successfully');
+      await saveRegisterationData(
+          context: context,
+          firstName: getFirstName,
+          lastName: getLastName,
+          email: getEmail,
+          password: getPassword);
+       // Message.success('saved Data');
     }
   }
 
   Future<void> registerWithEmailPassword(
-      {required BuildContext context, required String email, required String password}) async {
+      {required BuildContext context,
+      required String email,
+      required String password}) async {
     isLoading = true;
     await repo.registerUser(context: context, email: email, password: password);
     isLoading = false;
-
   }
 
+  Future<void> saveRegisterationData(
+      {required BuildContext context,
+      required String firstName,
+      required String lastName,
+      required String email,
+      required String password}) async {
+    isLoading = true;
+    await repo.saveRegisterationData(
+        context: context,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password);
+    isLoading = false;
+  }
 }

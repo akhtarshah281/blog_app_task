@@ -4,7 +4,7 @@ import 'app_colors.dart';
 
 
 class Message {
-  static void success(String message) {
+  static String success(String message) {
     Fluttertoast.cancel();
     Fluttertoast.showToast(
       msg: message,
@@ -14,6 +14,7 @@ class Message {
       backgroundColor: AppColors.GREEN,
       textColor: AppColors.WHITE,
     );
+    return message;
   }
 
   static void error(String message) {
