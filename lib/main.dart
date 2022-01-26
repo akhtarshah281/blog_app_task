@@ -52,5 +52,5 @@ main() async {
           systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
       ),
-      onGenerateRoute: RouteGenerator, initialRoute:LoginScreen.routeName));
+      onGenerateRoute: RouteGenerator, initialRoute:HomeScreen.routeName));
 }

@@ -112,10 +112,10 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   preferredSize: const Size.fromHeight(50),
                   child: appBar(
                       text: 'Posts',
-                      iconButton: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.arrow_back),
-                      ),
+                      // iconButton: IconButton(
+                      //   onPressed: () {},
+                      //   icon: const Icon(Icons.arrow_back),
+                      // ),
                       color: AppColors.MAROON),
                 ),
                 body: Container(

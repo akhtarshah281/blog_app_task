@@ -8,5 +8,5 @@ class PostsEntity {
   final String desc;
   final String imageURL;
 
-  PostsEntity(this.id, this.title, this.desc, this.imageURL);
+  PostsEntity({required this.id, required this.title, required this.desc, required this.imageURL});
 }
